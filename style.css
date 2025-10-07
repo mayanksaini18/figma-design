@@ -1,0 +1,13 @@
+body {
+    font-family: 'Inter', sans-serif;
+  
+}
+.hero-bg-gradient {
+    background-color: #FAE0E4; /* Fallback for older browsers */
+    background-image: linear-gradient(to right, var(--tw-color-soft-pink) 60%, transparent 80%);
+}
+@media (max-width: 1024px) {
+    .hero-bg-gradient {
+        background-image: none; /* Remove gradient on smaller screens */
+    }
+}
