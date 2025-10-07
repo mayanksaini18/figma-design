@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume Deserves a Yes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'resume-pink': '#D63447', // Custom primary accent color derived from the design
+                        'soft-pink': '#FAE0E4', // Lighter shade for hero background
+                        'dark-text': '#1F2937', // Dark gray for main text
+                       
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-dark-text">
+
+    <!-- 1. Header / Navigation Bar -->
+    <header class="shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo Section -->
+            <div class="flex flex-col">
+                <div class="flex items-center space-x-1">
+                    <svg class="w-6 h-6 text-resume-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <span class="text-xl text-dark-text">COMPANY</span>
+                </div>
+                <span class="text-xs text-gray-500 ml-7">Tagline</span>
+            </div>
+
+            <!-- Navigation Links (Desktop) -->
+            <nav class="hidden lg:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-resume-pink transition duration-150">Home</a>
+                <a href="#" class="hover:text-resume-pink transition duration-150">About Us</a>
+                <a href="#" class="hover:text-resume-pink transition duration-150">Our Services</a>
+                <a href="#" class="hover:text-resume-pink transition duration-150">Pricing</a>
+                <a href="#" class="hover:text-resume-pink transition duration-150">FAQ</a>
+            </nav>
+
+            <!-- Get A quote(Desktop) -->
+            <a href="#" class="hidden lg:block bg-resume-pink hover:bg-red-700 text-white font-semibold py-2 px-5 rounded-lg shadow-lg transition duration-300 transform hover:scale-[1.02] text-sm">
+                Get A Quote
+            </a>
+
+            <!-- Menu Toggle-Hamburger -->
+            <button id="menu-toggle" class="lg:hidden text-dark-text hover:text-resume-pink ">
+               <!-- <i class="fas fa-bars"></i> -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Off-Canvas Sidebar) -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-80 bg-soft-pink z-50 transform translate-x-full transition-transform duration-300 shadow-xl lg:hidden">
+        <div class="p-6 h-full flex flex-col">
+            <!-- Header and Close Button -->
+            <div class="flex items-center justify-between mb-8">
+                <!-- Logo Section (Repeated for Mobile Menu) -->
+                <div class="flex flex-col">
+                    <div class="flex items-center space-x-1">
+                        <svg class="w-6 h-6 text-resume-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <span class="text-xl font-extrabold text-dark-text">COMPANY</span>
+                    </div>
+                    <span class="text-xs text-gray-500 ml-7">Your Tagline</span>
+                </div>
+                <button id="menu-close" class="text-dark-text hover:text-resume-pink focus:outline-none p-1">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Links -->
+            <nav class="flex flex-col space-y-2 text-dark-text text-lg font-semibold flex-grow">
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-white transition duration-150">
+                    <svg class="w-5 h-5 mr-3 text-resume-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0v-4a1 1 0 011-1h2a1 1 0 011 1v4m-6 5h12"></path></svg>
+                    Home
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-white transition duration-150">
+                     <svg class="w-5 h-5 mr-3 text-dark-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    About Us
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-white transition duration-150">
+                     <svg class="w-5 h-5 mr-3 text-dark-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.25L13.25 21 3 10.75 10.75 0 21 10.25zM12 14a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                    Our Services
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-white transition duration-150">
+                    <svg class="w-5 h-5 mr-3 text-dark-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Pricing
+                </a>
+                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-white transition duration-150">
+                    <svg class="w-5 h-5 mr-3 text-dark-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9.247a1 1 0 01.442-.442l.538-.269a1 1 0 011.026.435l.217.435a1 1 0 00.915.589h.882a1 1 0 00.915-.589l.217-.435a1 1 0 011.026-.435l.538.269a1 1 0 01.442.442l.27.539a1 1 0 00.589.915v.882a1 1 0 00.589.915l.27.539a1 1 0 01-.442.442l-.538.269a1 1 0 01-1.026-.435l-.217-.435a1 1 0 00-.915-.589h-.882a1 1 0 00-.915.589l-.217.435a1 1 0 01-1.026.435l-.538-.269a1 1 0 01-.442-.442l-.27-.539a1 1 0 00-.589-.915v-.882a1 1 0 00-.589-.915l-.27-.539zM12 12V6M9 12H7V6h2"/></svg>
+                    FAQ
+                </a>
+            </nav>
+
+            <!-- Contact Button (Mobile) -->
+            <div class="mt-auto pt-6 border-t border-gray-300">
+                <a href="#" class="w-full block bg-resume-pink text-white hover:bg-pink-600 font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg text-center">
+                    CONTACT US
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="menu-overlay" class="fixed bg-opacity-50 z-40 hidden lg:hidden"></div>
+    
+    <!-- 2. Hero Section (Banner) -->
+    <section class="hero-bg-gradient py-16 md:py-24 overflow-hidden relative">
+        <div class="container mx-auto px-4 lg:flex items-center relative z-10">
+
+            <!-- Left Column: Content -->
+            <div class=" lg:pr-13 lg:w-1/2 mb-10 lg:mb-0">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-dark-text">
+                     <span class="text-resume-dark">Your Resume </span> <br>
+                    <span class="text-resume-pink ">Deserves a Yes </span> Let's
+                    <br>
+                    <span class="text-resume-dark">Make It Happen</span>
+                </h1>
+                <p class="text-gray-700 max-w-lg mb-8 text-sm">
+                    If Your Resume Isn't Getting Responses, It's Time For An Upgrade. Get An ATS-Optimized Resume Crafted By HR Experts To Help You Land More Interviews. Our Resumes Are Designed To Get Your Foot In The Door And Place Your Name At The Top Of The Shortlist.
+                </p>
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#" class="bg-white border-2 border-resume-pink text-dark-text hover:bg-soft-pink font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md text-center">
+                        RESUME PACKAGES
+                    </a>
+                    <a href="#" class="bg-resume-pink text-white hover:bg-red-700 font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md text-center">
+                        CONTACT US
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Image and Overlays -->
+            <div class="lg:w-1/2 relative flex justify-center lg:justify-end">
+                <!-- Main Image - Using placeholder to match the design's aesthetic and size -->
+                <img src="https://placehold.co/500x550/FAE0E4/F3738A?text=Professional+Instructor"
+                     alt="Professional Instructor with books"
+                     class="w-full max-w-md lg:max-w-none rounded-b-full shadow-2xl"
+                     style="height: 550px; object-fit: cover;">
+
+                <!-- 4.9 Rating Overlay Box -->
+                <div class="absolute bottom-24 left-4 md:left-12 lg:left-0 bg-white p-4 rounded-xl shadow-xl border-t-4 border-resume-pink flex flex-col items-center w-36">
+                    <span class="text-4xl font-extrabold text-dark-text">4.9</span>
+                    <div class="flex space-x-0.5 text-yellow-400 my-1">
+                        <!-- Star Icons -->
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.487 7.02l6.565-.955L10 0l2.948 6.065 6.565.955-4.758 4.625 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.487 7.02l6.565-.955L10 0l2.948 6.065 6.565.955-4.758 4.625 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.487 7.02l6.565-.955L10 0l2.948 6.065 6.565.955-4.758 4.625 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.487 7.02l6.565-.955L10 0l2.948 6.065 6.565.955-4.758 4.625 1.123 6.545z"/></svg>
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.487 7.02l6.565-.955L10 0l2.948 6.065 6.565.955-4.758 4.625 1.123 6.545z"/></svg>
+                    </div>
+                    <span class="text-xs font-semibold text-gray-600 whitespace-nowrap">Instructor Rating</span>
+                </div>
+
+                <!-- 260+ Resumes Stats Box -->
+                <div class="absolute bottom-16 right-4 md:right-12 lg:-right-4 bg-white p-4 rounded-xl shadow-xl border-l-4 border-resume-pink flex items-center space-x-3">
+                    <svg class="w-8 h-8 text-resume-pink" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Graduation Cap Icon -->
+                        <path d="M12 3L1 9l11 6 11-6-11-6zm0 14.5l-9-4.8v4.8l9 4.8 9-4.8v-4.8l-9 4.8z"/>
+                    </svg>
+                    <div class="flex flex-col leading-none">
+                        <span class="text-2xl font-extrabold text-dark-text">260+</span>
+                        <span class="text-xs font-semibold text-gray-600 whitespace-nowrap">Online Resume Created</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Features / Value Proposition Section -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+
+            <!-- Section Heading -->
+            <p class="text-resume-pink font-semibold mb-2 text-sm uppercase tracking-wider">What You Get</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-16 text-dark-text max-w-4xl mx-auto">
+                You're Not Just <span class="text-resume-pink">Another Applicant</span> And Your Resume Shouldn't Look Like One
+            </h2>
+
+            <!-- 4-Column Feature Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- Feature Card 1: Resume Format - ADDED BORDER AND SHADOW ADJUSTMENT -->
+                <div class="p-6 rounded-xl transition duration-300 border border-gray-200 shadow-md hover:shadow-xl group">
+                    <!-- SVG Illustration -->
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-20 h-20 text-resume-pink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark-text">A Resume Format That Gets You Interviews</h3>
+                    <p class="text-gray-600 text-sm">
+                        Get a professionally written, keyword-optimized resume that lands in recruiter inboxes.
+                    </p>
+                </div>
+
+                <!-- Feature Card 2: Cover Letter Style - ADDED BORDER AND SHADOW ADJUSTMENT -->
+                <div class="p-6 rounded-xl transition duration-300 border border-gray-200 shadow-md hover:shadow-xl group">
+                    <!-- SVG Illustration -->
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-20 h-20 text-resume-pink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20v2.5a2.5 2.5 0 0 1-2.5 2.5H6.5A2.5 2.5 0 0 1 4 19.5z"/><path d="M20 17H6.5a2.5 2.5 0 0 1 0-5H20V17z"/><path d="M20 12H6.5a2.5 2.5 0 0 1 0-5H20V12z"/><path d="M20 7H6.5A2.5 2.5 0 0 1 4 4.5V2h16v5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark-text">A Cover Letter Style That Stands Out Strong</h3>
+                    <p class="text-gray-600 text-sm">
+                        Stand out with a cover letter that speaks directly to the role and reflects your strengths.
+                    </p>
+                </div>
+
+                <!-- Feature Card 3: LinkedIn Profile - ADDED BORDER AND SHADOW ADJUSTMENT -->
+                <div class="p-6 rounded-xl transition duration-300 border border-gray-200 shadow-md hover:shadow-xl group">
+                    <!-- SVG Illustration (LinkedIn) -->
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-20 h-20 text-resume-pink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 8v5c0 1.66-1.34 3-3 3H8"/><path d="M8 10V7"/><path d="M12 16h6v-5c0-1.66-1.34-3-3-3h-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark-text">A LinkedIn Profile That Works For You</h3>
+                    <p class="text-gray-600 text-sm">
+                        Attract the right eyes, start conversations, and show up in recruiter searches.
+                    </p>
+                </div>
+
+                <!-- Feature Card 4: Interview Strategy - ADDED BORDER AND SHADOW ADJUSTMENT -->
+                <div class="p-6 rounded-xl transition duration-300 border border-gray-200 shadow-md hover:shadow-xl group">
+                    <!-- SVG Illustration (Interview/Confidence) -->
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-20 h-20 text-resume-pink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M17.5 10.5h4"/><path d="M17.5 14.5h4"/><path d="M17.5 18.5h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark-text">An Interview Strategy That Builds Confidence</h3>
+                    <p class="text-gray-600 text-sm">
+                        Interview preparation with real HR professionals so you speak clearly confidently.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Mobile Menu Functionality -->
+    <script src="script.js"></script>
+
+</body>
+</html>
