@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Resume Deserves a Yes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Custom Tailwind Configuration -->
     <script>
@@ -20,6 +23,7 @@
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                        handwriting: ["Just Another Hand", 'cursive'],
                     },
                 }
             }
@@ -57,7 +61,9 @@
             <!-- Menu Toggle-Hamburger -->
             <button id="menu-toggle" class="lg:hidden text-dark-text hover:text-resume-pink ">
                <!-- <i class="fas fa-bars"></i> -->
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
         </div>
     </header>
@@ -83,7 +89,7 @@
             <!-- Mobile Navigation Links -->
             <nav class="flex flex-col space-y-2 text-dark-text text-lg font-semibold flex-grow">
                 <a href="#" class="flex items-center p-3 rounded-lg hover:bg-white transition duration-150">
-                    <svg class="w-5 h-5 mr-3 text-resume-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0v-4a1 1 0 011-1h2a1 1 0 011 1v4m-6 5h12"></path></svg>
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0v-4a1 1 0 011-1h2a1 1 0 011 1v4m-6 5h12"></path></svg>
                     Home
                 </a>
                 <a href="#" class="flex items-center p-3 rounded-lg hover:bg-white transition duration-150">
@@ -106,7 +112,7 @@
 
             <!-- Contact Button (Mobile) -->
             <div class="mt-auto pt-6 border-t border-gray-300">
-                <a href="#" class="w-full block bg-resume-pink text-white hover:bg-pink-600 font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg text-center">
+                <a href="#" class="w-full block bg-resume-pink text-white hover:bg-red-700 font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg text-center">
                     CONTACT US
                 </a>
             </div>
@@ -124,7 +130,8 @@
             <div class=" lg:pr-13 lg:w-1/2 mb-10 lg:mb-0">
                 <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-dark-text">
                      <span class="text-resume-dark">Your Resume </span> <br>
-                    <span class="text-resume-pink ">Deserves a Yes </span> Let's
+                    <!-- <span class="text-resume-pink ">Deserves a Yes </span> Let's -->
+                    <span class="text-resume-pink font-handwriting text-7xl">Deserves a Yes </span> Let's
                     <br>
                     <span class="text-resume-dark">Make It Happen</span>
                 </h1>
@@ -145,9 +152,9 @@
             <!-- Right Column: Image and Overlays -->
             <div class="lg:w-1/2 relative flex justify-center lg:justify-end">
                 <!-- Main Image - Using placeholder to match the design's aesthetic and size -->
-                <img src="https://placehold.co/500x550/FAE0E4/F3738A?text=Professional+Instructor"
+                <img src="./public/image/fotos-uiPx4PeZ0es-unsplash-removebg-preview (1).jpg"
                      alt="Professional Instructor with books"
-                     class="w-full max-w-md lg:max-w-none rounded-b-full shadow-2xl"
+                     class="w-full max-w-md lg:max-w-none rounded-full "
                      style="height: 550px; object-fit: cover;">
 
                 <!-- 4.9 Rating Overlay Box -->
